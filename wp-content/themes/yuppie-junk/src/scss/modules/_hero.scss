@@ -1,0 +1,98 @@
+.ypj-home-hero{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 1px;
+  margin: -1px;
+  background: url($image-location + "homepage-hero.jpg");
+  background-position: center;
+  background-size: cover;
+  @media #{$tablet} {
+    height: 100%;
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url($image-location + "grid-overlay.png") repeat;
+  }
+
+  .ypj-inner-wrapper{
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .yjp-hero-content{
+    position: relative;
+    padding: 90px 0;
+    @media #{$tablet} {
+      padding-top: 120px;
+      padding-bottom: 0;
+
+    }
+    @media #{$desktop} {
+      padding-top: 0;
+      top: calc(50% - 200px);
+    }
+  }
+
+  .ypj-hero-logo{
+    position: relative;
+    margin: 0 2% 30px;
+
+    @media #{$tablet} {
+      margin: 0 auto 40px;
+      max-width: 640px;
+    }
+  }
+
+  .ypj-hero-lead-in{
+    position: relative;
+    margin: 30px 0;
+    @media #{$tablet} {
+      margin: 60px 0;
+    }
+
+    p{
+      margin: 0 0 30px;
+      font-family: $font-raleway;
+      @include font-size(22);
+      color: $white;
+      text-align: center;
+      @media #{$tablet} {
+        margin-bottom: 60px;
+        @include font-size(30);
+      }
+    }
+
+    .ypj-hero-btn{
+      position: relative;
+      display: table;
+      margin: 20px auto;
+      font-family: $font-mission-gothic;
+      @include font-size(22);
+      text-transform: uppercase;
+      @media #{$tablet} {
+        @include font-size(32);
+      }
+
+      &:after{
+        position: relative;
+        bottom: -2px;
+        margin-left: 3px;
+        @include psuedo-icon('\e004', 22);
+        @media #{$tablet} {
+          margin-left: 5px;
+          @include font-size(30);
+        }
+      }
+    }
+  }
+}

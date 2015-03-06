@@ -1,0 +1,43 @@
+@import "variables";
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: $font-icons;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "\e000";
+}
+
+.icon-download:before {
+  content: "\e001";
+}
+
+.icon-expand:before {
+  content: "\e002";
+}
+
+.icon-facebook:before {
+  content: "\e003";
+}
+
+.icon-next:before {
+  content: "\e004";
+}
+
+.icon-menu:before {
+  content: "\e005";
+}
+
+.icon-twitter:before {
+  content: "\e006";
+}

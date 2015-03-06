@@ -1,0 +1,93 @@
+.ypj-submissions{
+
+  .ypj-inner-wrapper{
+    padding: 40px 20px;
+    @media #{$tablet} {
+      padding: 50px 20px;
+    }
+  }
+
+  .ypj-heading{
+    margin-bottom: 20px;
+    font-family: $font-mission-gothic-bold;
+    @include font-size(24);
+    text-transform: uppercase;
+    text-align: center;
+    @media #{$tablet} {
+      @include font-size(36);
+    }
+  }
+
+  .ypj-details{
+    margin: 20px 0;
+    font-family: $font-mission-gothic-light;
+    @include font-size(18);
+    text-align: center;
+    text-transform: uppercase;
+    @media #{$tablet} {
+      @include font-size(24);
+    }
+  }
+
+  .ypj-submission-form{
+    margin-top: 40px;
+    @media #{$tablet} {
+      margin-top: 60px;
+      @include make-row(40px);
+    }
+
+    input[type='text'],
+    textarea{
+      border: 1px solid #e1e1e1;
+      padding: 5px;
+      @include font-size(16);
+      font-family: $font-mission-gothic-light;
+    }
+
+    textarea{
+      height: 140px;
+      resize: none;
+    }
+
+    .field-wrap{
+      margin-bottom: 30px;
+      @media #{$tablet} {
+        margin-bottom: 40px;
+        @include make-xs-column(6, 30px);
+      }
+      @media #{$desktop} {
+        @include make-xs-column(6, 70px);
+      }
+
+      &:nth-of-type(2n+0){
+        clear: both;
+      }
+    }
+
+    .list-radio-wrap li{
+      label{
+        @include font-size(16);
+        font-family: $font-mission-gothic-light;
+      }
+    }
+
+    .submit-wrap{
+      clear: both;
+
+      .ypj-submit{
+        @include font-size(22);
+        text-transform: uppercase;
+        @media #{$tablet} {
+          @include font-size(24);
+        }
+      }
+
+    }
+
+    .ninja-forms-required-items{
+      display: none;
+    }
+
+  }
+
+}

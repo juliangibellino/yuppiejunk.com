@@ -1,0 +1,5 @@
+{
+    "browserify": true,
+    "globals": ["$", "angular"],
+    "predef": ["angular"]
+}

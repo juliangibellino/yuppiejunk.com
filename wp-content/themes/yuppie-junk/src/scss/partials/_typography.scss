@@ -1,0 +1,234 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+
+
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+$font-location: './../fonts/';
+
+/** RALEWAY **/
+@font-face {
+  font-family: 'Raleway';
+  src: url($font-location + 'raleway/raleway_thin-webfont.eot');
+  src: url($font-location + 'raleway/raleway_thin-webfont.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'raleway/raleway_thin-webfont.woff') format('woff'),
+  url($font-location + 'raleway/raleway_thin-webfont.ttf') format('truetype'),
+  url($font-location + 'raleway/raleway_thin-webfont.svg#raleway_thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/** LEAGUE GOTHIC **/
+/* Regular */
+@font-face {
+  font-family: 'League Gothic';
+  src: url($font-location + 'league-gothic/leaguegothic-regular-webfont.eot');
+  src: url($font-location + 'league-gothic/leaguegothic-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'league-gothic/leaguegothic-regular-webfont.woff') format('woff'),
+  url($font-location + 'league-gothic/leaguegothic-regular-webfont.ttf') format('truetype'),
+  url($font-location + 'league-gothic/leaguegothic-regular-webfont.svg#league_gothicregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Italic */
+@font-face {
+  font-family: 'League Gothic';
+  src: url($font-location + 'league-gothic/leaguegothic-italic-webfont.eot');
+  src: url($font-location + 'league-gothic/leaguegothic-italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'league-gothic/leaguegothic-italic-webfont.woff') format('woff'),
+  url($font-location + 'league-gothic/leaguegothic-italic-webfont.ttf') format('truetype'),
+  url($font-location + 'league-gothic/leaguegothic-italic-webfont.svg#league_gothic_italicregular') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* Condensed */
+@font-face {
+  font-family: 'League Gothic Condensed';
+  src: url($font-location + 'league-gothic/leaguegothic-condensed-regular-webfont.eot');
+  src: url($font-location + 'league-gothic/leaguegothic-condensed-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'league-gothic/leaguegothic-condensed-regular-webfont.woff') format('woff'),
+  url($font-location + 'league-gothic/leaguegothic-condensed-regular-webfont.ttf') format('truetype'),
+  url($font-location + 'league-gothic/leaguegothic-condensed-regular-webfont.svg#league_gothic_condensed-Rg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* Condensed Italic */
+@font-face {
+  font-family: 'League Gothic Condensed';
+  src: url($font-location + 'league-gothic/leaguegothic-condensed-italic-webfont.eot');
+  src: url($font-location + 'league-gothic/leaguegothic-condensed-italic-webfont.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'league-gothic/leaguegothic-condensed-italic-webfont.woff') format('woff'),
+  url($font-location + 'league-gothic/leaguegothic-condensed-italic-webfont.ttf') format('truetype'),
+  url($font-location + 'league-gothic/leaguegothic-condensed-italic-webfont.svg#league_gothic_condensed_itaRg') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+
+
+/** MISSION GOTHIC **/
+@font-face {
+  font-family: 'Mission Gothic Thin';
+  src: url($font-location + 'mission-gothic/mission_gothic_thin.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_thin.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_thin.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_thin.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_thin.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_thin.svg#mission_gothicthin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Mission Gothic Thin';
+  src: url($font-location + 'mission-gothic/mission_gothic_thin_italic.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_thin_italic.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_thin_italic.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_thin_italic.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_thin_italic.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_thin_italic.svg#mission_gothicthin_italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Mission Gothic';
+  src: url($font-location + 'mission-gothic/mission_gothic_regular.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_regular.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_regular.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_regular.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_regular.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_regular.svg#mission_gothicregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mission Gothic';
+  src: url($font-location + 'mission-gothic/mission_gothic_regular_italic.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_regular_italic.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_regular_italic.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_regular_italic.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_regular_italic.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_regular_italic.svg#mission_gothicregular_italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+
+}
+
+@font-face {
+  font-family: 'Mission Gothic Light';
+  src: url($font-location + 'mission-gothic/mission_gothic_light.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_light.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_light.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_light.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_light.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_light.svg#mission_gothiclight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mission Gothic Light';
+  src: url($font-location + 'mission-gothic/mission_gothic_light_italic.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_light_italic.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_light_italic.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_light_italic.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_light_italic.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_light_italic.svg#mission_gothiclight_italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Mission Gothic Bold';
+  src: url($font-location + 'mission-gothic/mission_gothic_bold.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_bold.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_bold.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_bold.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_bold.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_bold.svg#mission_gothicbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mission Gothic Bold';
+  src: url($font-location + 'mission-gothic/mission_gothic_bold_italic.eot');
+  src: url($font-location + 'mission-gothic/mission_gothic_bold_italic.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'mission-gothic/mission_gothic_bold_italic.woff2') format('woff2'),
+  url($font-location + 'mission-gothic/mission_gothic_bold_italic.woff') format('woff'),
+  url($font-location + 'mission-gothic/mission_gothic_bold_italic.ttf') format('truetype'),
+  url($font-location + 'mission-gothic/mission_gothic_bold_italic.svg#mission_gothicbold_italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* ICONS */
+@font-face {
+  font-family: 'Yuppie Icons';
+  src: url($font-location + 'icons/ypj-icons.eot');
+  src: url($font-location + 'icons/ypj-icons.eot?#iefix') format('embedded-opentype'),
+  url($font-location + 'icons/ypj-icons.woff') format('woff'),
+  url($font-location + 'icons/ypj-icons.ttf') format('truetype'),
+  url($font-location + 'icons/ypj-icons.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// font stacks
+$sans-serif:        "Raleway", sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+$font-raleway:                  "Raleway", sans-serif;
+$font-mission-gothic:           "Mission Gothic", sans-serif;
+$font-mission-gothic-light:     "Mission Gothic Light", sans-serif;
+$font-mission-gothic-thin:      "Mission Gothic Thin", sans-serif;
+$font-mission-gothic-bold:      "Mission Gothic Bold", sans-serif;
+$font-icons:  "Yuppie Icons";
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+}
+

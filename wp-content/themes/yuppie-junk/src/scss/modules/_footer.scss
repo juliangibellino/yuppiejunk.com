@@ -1,0 +1,97 @@
+.ypj-footer{
+  background: $color-dark-gray;
+  color: $white;
+  overflow: hidden;
+  @media #{$tablet} {
+    min-height: 400px;
+  }
+
+  .ypj-inner-wrapper{
+    padding: 40px 20px;
+    @include clearer();
+  }
+
+  .ypj-footer-left{
+    @media #{$tablet} {
+      @include make-xs-column(6);
+    }
+  }
+
+  .ypj-footer-right{
+    @include clearer();
+    @media #{$tablet} {
+      @include make-xs-column(6);
+      max-width: 310px;
+      float: right;
+    }
+  }
+
+  .ypj-footer-copy{
+    .ypj-logo{
+      width: 40%;
+      max-width: 165px;
+      margin: 10px 0;
+
+      img{
+        width: 100%;
+      }
+    }
+
+    p{
+      margin: 10px 0;
+      @include font-size(16);
+      font-family: $font-mission-gothic-thin;
+      text-transform: uppercase;
+    }
+  }
+
+  .ypj-social-links{
+    margin: 40px 0;
+    @media #{$tablet} {
+      float: left;
+      margin-top: 0;
+      padding-right: 20px;
+      border-right: 1px solid $color-gray;
+    }
+
+    h5{
+      margin: 0 0 10px;
+      @include font-size(20);
+      font-family: $font-mission-gothic-bold;
+      text-transform: uppercase;
+    }
+
+    a{
+      color: $white;
+      display: block;
+      margin: 10px 0;
+      text-transform: uppercase;
+    }
+  }
+
+  .ypj-affiliate-links{
+    margin: 40px 0;
+    @media #{$tablet} {
+      float: right;
+      margin-top: 0;
+      padding-left: 20px;
+    }
+
+    h6 {
+      margin: 0 0 10px;
+      @include font-size(16);
+      font-family: $font-mission-gothic;
+      text-transform: uppercase;
+    }
+    a{
+      display: inline-block;
+      width: 65px;
+      margin-right: 10px;
+      &:last-of-type{
+        margin-right: 0;
+      }
+    }
+
+  }
+
+}

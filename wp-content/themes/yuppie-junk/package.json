@@ -1,0 +1,57 @@
+{
+  "name": "YuppieJunk",
+  "version": "1.0.0",
+  "description": "YuppieJunk Podcast",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juliangibellino/yuppiejunk.com"
+  },
+  "author": "Julian Gibellino",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/juliangibellino/yuppiejunk.com/issues"
+  },
+  "homepage": "https://github.com/juliangibellino/yuppiejunk.com",
+  "devDependencies": {
+    "bower": "^1.3.12",
+    "browserify": "^8.1.3",
+    "browserify-shim": "^3.8.2",
+    "del": "^1.1.1",
+    "gulp": "^3.8.10",
+    "gulp-compass": "^2.0.3",
+    "gulp-concat": "^2.4.3",
+    "gulp-copy": "0.0.2",
+    "gulp-jshint": "^1.9.2",
+    "gulp-minify-css": "^0.4.5",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.1.0",
+    "gulp-watch": "^4.1.1",
+    "stringify": "^3.1.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.0.0"
+  },
+  "browser": {
+    "jquery": "./src/js/bower/jquery/dist/jquery.js",
+    "lodash": "./src/js/bower/lodash/lodash.js",
+    "angular": "./src/js/bower/angular/angular.js",
+    "angular-sanitize": "./src/js/bower/angular-sanitize/angular-sanitize.js",
+    "angular-bootstrap": "./src/js/bower/angular-bootstrap/ui-bootstrap.min.js",
+    "angular-bootstrap-templates": "./src/js/bower/angular-bootstrap/ui-bootstrap-tpls.min.js"
+  },
+  "browserify": {
+    "transform": [
+      "stringify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "lodash": "_",
+    "jwplayer": "global:jwplayer"
+  }
+}
