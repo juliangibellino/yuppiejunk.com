@@ -14,10 +14,7 @@ angular.module('yp-app', [
     'ngSanitize',
     'ui.bootstrap',
     'yuppie-junk',
-    'header',
+    'scroll-to',
     'podcast-playlist'
 ]);
-
-//Set JW Player Key
-//window.jwplayer.key="+kV0GeiZJZhgZPB9B4FeiNa+mTdllC1ff12UWw==";
 

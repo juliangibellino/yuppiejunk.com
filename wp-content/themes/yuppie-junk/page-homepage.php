@@ -18,7 +18,7 @@
                 <div class="ypj-hero-lead-in">
                     <p><?php the_field('hero_lead_in'); ?></p>
 
-                    <a href="/#!/#episodes" class="ypj-hero-btn btn btn-lg btn-primary">Listen</a>
+                    <a scroll-to="" data-href="#episodes" class="ypj-hero-btn btn btn-lg btn-primary">Listen</a>
                 </div>
             </div>
         </div>

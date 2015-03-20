@@ -251,4 +251,42 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 		'comment-form'
 	) );
 
+/************* CUSTOMIZE ADMIN LAYOUT *********************/
+
+/**
+ * Remove menu's that aren't being used to avoid confusion
+ */
+function remove_menus(){
+    remove_menu_page( 'edit.php' );                   //Posts
+    remove_menu_page( 'edit-comments.php' );          //Comments
+    remove_menu_page( 'edit.php?post_type=custom_type' ); //Custom post type
+}
+
+add_action( 'admin_menu', 'remove_menus' );
+
+
+function custom_menu_order($menu_ord) {
+    if (!$menu_ord) return true;
+
+    return array(
+        'index.php', // Dashboard
+        'separator1', // First separator
+        'edit.php?post_type=page', // Pages
+        'edit.php?post_type=podcast', // Podcasts
+        'upload.php', // Media
+        'admin.php?page=ninja-forms', // Forms
+        'separator2', // Second separator
+        'themes.php', // Appearance
+        'plugins.php', // Plugins
+        'users.php', // Users
+        'tools.php', // Tools
+        'options-general.php', // Settings
+        'separator-last', // Last separator
+        'admin.php' // Plugins
+    );
+}
+add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
+add_filter('menu_order', 'custom_menu_order');
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
