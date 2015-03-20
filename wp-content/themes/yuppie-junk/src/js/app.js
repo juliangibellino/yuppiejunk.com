@@ -14,8 +14,8 @@ angular.module('yp-app', [
     'ngSanitize',
     'ui.bootstrap',
     'yuppie-junk',
-    'podcast-playlist',
-    'scroll-to'
+    'header',
+    'podcast-playlist'
 ]);
 
 //Set JW Player Key

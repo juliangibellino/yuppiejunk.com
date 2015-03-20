@@ -1,0 +1,49 @@
+.ypj-header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  @include clearer();
+  @include transition(background 0.5s ease);
+
+  &.background-enabled{
+    background: rgba(0,0,0,0.3);
+  }
+
+  .ypj-inner-wrapper{
+    padding: 10px 20px;
+  }
+
+  .ypj-menu-button{
+    &:before{
+      @include psuedo-icon('icon-menu', 18);
+    }
+  }
+
+  .ypj-navigation{
+
+    .ypj-main-nav{
+      display: block;
+      list-style: none;
+
+      li{
+        display: block;
+        list-style: none;
+        @include font-size(18);
+        font-family: $font-mission-gothic;
+        padding: 0 20px;
+
+        &:last-of-type{
+          padding-right: 0;
+        }
+
+        a{
+          color: $white;
+        }
+      }
+    }
+
+  }
+
+}

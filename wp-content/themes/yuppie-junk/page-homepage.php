@@ -18,12 +18,12 @@
                 <div class="ypj-hero-lead-in">
                     <p><?php the_field('hero_lead_in'); ?></p>
 
-                    <a href="#recent-episodes" scroll-to="" class="ypj-hero-btn btn btn-lg btn-primary">Listen</a>
+                    <a href="/#!/#episodes" class="ypj-hero-btn btn btn-lg btn-primary">Listen</a>
                 </div>
             </div>
         </div>
     </article>
-    <article id="recent-episodes" class="ypj-recent-episodes" data-ng-controller="recentEpisodesCtrl">
+    <article id="episodes" class="ypj-recent-episodes" data-ng-controller="recentEpisodesCtrl">
         <div class="ypj-inner-wrapper">
             <h2 class="ypj-episodes-header">Recent Episodes</h2>
 
@@ -225,7 +225,7 @@
 
     </article>
 
-    <article id="submissions" class="ypj-submissions">
+    <article id="submit" class="ypj-submissions">
         <div class="ypj-inner-wrapper">
 
             <h2 class="ypj-heading"><?php the_field('submissions_heading'); ?></h2>
