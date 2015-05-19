@@ -26,7 +26,7 @@ module.exports = [function() {
                 } else {
                     $target = element;
                 }
-                $("body").animate({scrollTop: $target.offset().top}, "slow");
+                $('html, body').animate({scrollTop: $target.offset().top}, 'slow');
             });
 
         }

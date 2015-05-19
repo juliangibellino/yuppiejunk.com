@@ -62,7 +62,7 @@
                         <div class="ypj-current-episode-info">
                             <h3 class="ypj-episode-title">{{currentEpisodeTitle}}</h3>
 
-                            <p>{{currentEpisodeDescription}}</p>
+                            <div data-ng-bind-html="currentEpisodeDescription"></div>
                         </div>
                     </div>
 
@@ -78,7 +78,8 @@
             <div class="ypj-episodes">
                 <?php
                 $podcastParams = array(
-                    'orderby' => 't.post_date DESC'
+                    'orderby' => 't.post_date DESC',
+                    'limit' => -1
                 );
 
                 $podcasts = pods('podcast', $podcastParams);
@@ -132,7 +133,7 @@
                                 </div>
                                 <div class="ypj-episode-content">
                                     <p class="ypj-episode-title"><?php echo $title; ?></p>
-                                    <p class="yjp-episode-summary"><?php echo $summary; ?></p>
+                                    <div class="yjp-episode-summary"><?php echo $summary; ?></div>
                                     <p class="ypj-episode-status">
                                         <span data-ng-show="!isActive">Play</span>
                                         <span data-ng-show="isActive">Currently Playing</span>
@@ -141,11 +142,10 @@
                             </div>
                             <? //Podcast episode end ?>
 
-                        <?php if( ($loopIndex - ($podcastPerRow - 1)) % $podcastPerRow == 0) { ?>
+                        <?php if( (($loopIndex - ($podcastPerRow - 1)) % $podcastPerRow == 0) || ($loopIndex == $podcastTotal - 1) ) { ?>
                         </div>
                         <?php } ?>
                         <? //Podcast row end ?>
-
                     <?php if( (($loopIndex - ($podcastPerPage - 1)) % $podcastPerPage  == 0) || ($loopIndex == $podcastTotal - 1) ) { ?>
                     </div>
                     <?php } ?>
