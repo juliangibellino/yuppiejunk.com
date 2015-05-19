@@ -88,6 +88,18 @@
       display: none;
     }
 
+    .ninja-forms-success-msg{
+      margin-top: -20px;
+      @include font-size(24);
+      font-family: $font-mission-gothic-light;
+      text-align: center;
+      color: $color-orange;
+
+      @media #{$tablet} {
+        @include font-size(30);
+      }
+    }
+
   }
 
 }
