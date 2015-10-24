@@ -9,6 +9,8 @@
 <section class="ypj-homepage" ng-controller="yuppieJunkCtrl">
 
     <article id="home" class="ypj-home-hero">
+        <?php get_header('nav'); ?>
+
         <div class="ypj-inner-wrapper">
             <div class="yjp-hero-content">
                 <h1 class="ypj-hero-logo">

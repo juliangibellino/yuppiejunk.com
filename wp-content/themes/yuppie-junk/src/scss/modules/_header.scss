@@ -1,42 +1,139 @@
 .ypj-header{
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 100;
+  background: #263441;
   @include clearer();
-  @include transition(background 0.5s ease);
 
-  &.background-enabled{
-    background: rgba(0,0,0,0.3);
+  &.is-transparent{
+    position: absolute;
+    background: transparent;
+    z-index: 100;
   }
 
   .ypj-inner-wrapper{
     padding: 10px 20px;
+
+    &.is-collapsed {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      @media #{$tablet} {
+
+        top: 20px;
+        right: 0;
+      }
+    }
   }
 
   .ypj-menu-button{
+    color: $white;
+    float: right;
+    width: 35px;
+    margin-top: 0;
+    cursor: pointer;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+
+    @media #{$tablet} {
+      display: none;
+    }
+
     &:before{
-      @include psuedo-icon('icon-menu', 18);
+      @include psuedo-icon('\e005', 35);
+    }
+
+    &.active{
+      &:before{
+        @include psuedo-icon('\e000', 35);
+      }
     }
   }
 
   .ypj-navigation{
 
+    .ypj-header-logo{
+      margin: 10px 0;
+      width: 50%;
+      height: auto;
+      display: none;
+
+      @media #{$tablet} {
+        width: 150px;
+        margin: 0;
+      }
+
+      @media #{$desktop} {
+        width: 283px;
+      }
+
+      &.has-logo{
+        display: block;
+
+        @media #{$tablet} {
+          display: inline-block;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+    }
+
     .ypj-main-nav{
-      display: block;
+      display: none;
       list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+
+      &.active {
+        display: block;
+        padding-top: 10px;
+
+        &.has-logo{
+          border-top: 1px solid $white;
+
+          @media #{$tablet} {
+            border-top: none;
+            padding-top: 0;
+          }
+        }
+
+      }
+
+      @media #{$tablet} {
+        display: block;
+        float: right;
+        margin-top: 5px;
+      }
+
+      @media #{$desktop} {
+        margin-top: 15px;
+      }
 
       li{
         display: block;
         list-style: none;
         @include font-size(18);
         font-family: $font-mission-gothic;
-        padding: 0 20px;
+        padding: 0;
+        margin: 0 0 15px 0;
 
-        &:last-of-type{
-          padding-right: 0;
+        @media #{$tablet} {
+          margin: 0 0 0 15px;
+          display: inline-block;
+
+          &:last-of-type{
+            margin-right: 0;
+          }
+
         }
+
+        @media #{$desktop} {
+          margin-right: 20px;
+        }
+
 
         a{
           color: $white;
