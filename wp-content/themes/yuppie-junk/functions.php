@@ -273,6 +273,7 @@ function custom_menu_order($menu_ord) {
         'separator1', // First separator
         'edit.php?post_type=page', // Pages
         'edit.php?post_type=podcast', // Podcasts
+        'edit.php?post_type=premium', // Premium Podcasts
         'upload.php', // Media
         'admin.php?page=ninja-forms', // Forms
         'separator2', // Second separator

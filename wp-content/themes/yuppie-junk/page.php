@@ -10,7 +10,7 @@
 
     <?php get_header('nav'); ?>
 
-    <div class="ypj-inner-wrapper">
+    <div class="ypj-inner-wrapper ypj-inner-content">
 
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 

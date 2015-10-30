@@ -1,0 +1,46 @@
+.ypj-archive-pagination{
+  @include clearer();
+
+  .pagination {
+    display: table;
+    margin: 40px auto;
+  }
+
+  ul.page-numbers {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    float: left;
+
+    .page-numbers{
+      background: $color-light-gray;
+      position: relative;
+      padding: 6px 12px;
+      line-height: 1.42857;
+      text-decoration: none;
+      color: #666666;
+      background-color: $white;
+      border: none;
+      margin-left: -1px;
+
+      &:hover {
+        background: $color-gray;
+      }
+
+      &.current,
+      &.current:hover{
+        color: $white;
+        background: $color-orange;
+      }
+
+      &.prev,
+      &.next {
+        background: none;
+      }
+
+    }
+
+  }
+}
