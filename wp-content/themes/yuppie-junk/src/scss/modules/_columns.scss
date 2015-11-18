@@ -1,0 +1,41 @@
+.ypj-column-intro {
+  margin: 20px 0 30px;
+}
+
+.ypj-column-2 {
+  @include make-row();
+
+  .ypj-column-2__cell {
+    @include make-xs-column(12);
+
+    @media #{$tablet} {
+      @include make-md-column(6);
+    }
+  }
+
+  .ypj-column-2__panel {
+    @media #{$tablet} {
+      min-height: 200px;
+    }
+  }
+
+}
+
+.ypj-column-3 {
+  @include make-row();
+
+  .ypj-column-3__cell {
+    @include make-xs-column(12);
+
+    @media #{$tablet} {
+      @include make-md-column(4);
+    }
+  }
+
+  .ypj-column-3__panel {
+    @media #{$tablet} {
+      min-height: 225px;
+    }
+  }
+
+}

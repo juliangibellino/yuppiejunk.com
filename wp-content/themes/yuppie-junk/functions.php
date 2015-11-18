@@ -257,7 +257,6 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
  * Remove menu's that aren't being used to avoid confusion
  */
 function remove_menus(){
-    remove_menu_page( 'edit.php' );                   //Posts
     remove_menu_page( 'edit-comments.php' );          //Comments
     remove_menu_page( 'edit.php?post_type=custom_type' ); //Custom post type
 }
@@ -273,7 +272,8 @@ function custom_menu_order($menu_ord) {
         'separator1', // First separator
         'edit.php?post_type=page', // Pages
         'edit.php?post_type=podcast', // Podcasts
-        'edit.php?post_type=premium', // Premium Podcasts
+        'edit.php?post_type=post', // Premium
+        //'edit.php?post_type=premium', // Premium Podcasts
         'upload.php', // Media
         'admin.php?page=ninja-forms', // Forms
         'separator2', // Second separator
@@ -289,5 +289,41 @@ function custom_menu_order($menu_ord) {
 add_filter('custom_menu_order', 'custom_menu_order'); // Activate custom_menu_order
 add_filter('menu_order', 'custom_menu_order');
 
+/**
+ *
+ */
+add_action( 'init', 'my_new_default_post_type', 1 );
+function my_new_default_post_type() {
 
-/* DON'T DELETE THIS CLOSING TAG */ ?>
+    register_post_type( 'post', array(
+        'labels' => array(
+            'name_admin_bar' => _x( 'Premium', 'add new on admin bar' ),
+        ),
+        'public'  => true,
+        '_builtin' => false,
+        '_edit_link' => 'post.php?post=%d',
+        'capability_type' => 'post',
+        'map_meta_cap' => true,
+        'hierarchical' => false,
+        'has_archive' => true,
+        'rewrite' => array( 'slug' => 'premium-podcast' ),
+        'query_var' => false,
+        'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'post-formats' ),
+    ) );
+}
+
+/*
+ * disable admin bar
+ */
+show_admin_bar(false);
+
+/**
+ * Woocommerce
+ */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+/* DON'T DELETE THIS CLOSING TAG */
+?>

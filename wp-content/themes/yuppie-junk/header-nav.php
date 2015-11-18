@@ -8,6 +8,11 @@
                 <ul class="ypj-main-nav" ng-class="{'active' : isMenuActive, 'has-logo' :  hasBackground}">
                     <li><a href="/#!/#episodes">Recent Episodes</a></li>
                     <li><a href="/#!/#about">About</a></li>
+                    <li><a href="/premium/">Premium</a></li>
+                    <?php
+                    if ( is_user_logged_in() ) { ?>
+                        <li><a href="<?php echo wp_logout_url(home_url()); ?> ">Sign Out</a></li>
+                    <? } ?>
                 </ul>
             </nav>
         </div>
